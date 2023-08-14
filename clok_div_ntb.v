@@ -1,26 +1,5 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   08:17:06 08/14/2023
-// Design Name:   clock_div_bynbit
-// Module Name:   C:/example_verilog/d_ff/clok_div_ntb.v
-// Project Name:  d_ff
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: clock_div_bynbit
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
 
 module clok_div_ntb;
 
@@ -28,13 +7,30 @@ module clok_div_ntb;
 	reg clk;
 
 	// Outputs
-	wire  clk_div;
-
+	wire  clk_div1;
+	wire clk_div2;
+wire clk_div3;
+wire clk_div4;
 	// Instantiate the Unit Under Test (UUT)
-	clock_div_bynbit #(.DIV(16))
-	uut (
+	clock_div_bynbit #(.DIV(2)) //clock  div by 2
+	uut0 (
 		.clk(clk), 
-		.clk_div(clk_div)
+		.clk_div(clk_div1)
+	);
+clock_div_bynbit #(.DIV(4))//clock div by 4
+	uut1 (
+		.clk(clk), 
+		.clk_div(clk_div2)
+	);
+	clock_div_bynbit #(.DIV(8))//clock div by 8
+	uut2 (
+		.clk(clk), 
+		.clk_div(clk_div3)
+	);
+	clock_div_bynbit #(.DIV(16))//clock div by 16
+	uut3 (
+		.clk(clk), 
+		.clk_div(clk_div4)
 	);
 
 	initial begin
