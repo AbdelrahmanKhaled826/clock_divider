@@ -1,24 +1,6 @@
 
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    07:37:19 08/14/2023 
-// Design Name: 
-// Module Name:    clock_div_bynbit 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
 module clock_div_bynbit
 #(
 parameter DIV=2)
